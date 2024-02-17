@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- Basic differential drive mobile base -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="diffdrive_robot">
+  <xacro:arg name="prefix" default="" />
+  <xacro:arg name="use_mock_hardware" default="false" />
+
+  <!-- 导入基本的几何形状 -->
+  <xacro:include filename="$(find diff_test_control)/urdf/diffbot_description.urdf.xacro" />
+
+  <!-- 导入RVIZ里面颜色显示 -->
+  <xacro:include filename="$(find diff_test_control)/urdf/diffbot.materials.xacro" />
+
+  <!-- 导入 ros2_control 描述部分 -->
+  <xacro:include filename="$(find diff_test_control)/ros2_control/diffbot.ros2_control.xacro" />
+
+  <xacro:diffbot prefix="$(arg prefix)" />
+
+  <xacro:diffbot_ros2_control
+    name="DiffBot" prefix="$(arg prefix)" use_mock_hardware="$(arg use_mock_hardware)"/>
+
+</robot>

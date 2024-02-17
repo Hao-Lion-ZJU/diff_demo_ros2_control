@@ -1,0 +1,9 @@
+<library path="diff_test_control">
+  <class name="diff_test_control/DiffTestSystemHardware"
+         type="diff_test_control::DiffTestSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+    DiffTestSystemHardware using a system hardware interface-type.
+    </description>
+  </class>
+</library>

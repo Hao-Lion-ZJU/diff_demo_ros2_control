@@ -1,0 +1,9 @@
+<library path="diff_test_controller">
+  <class name="diff_test_controller/DiffTestController" 
+  type="diff_test_controller::DiffTestController" 
+  base_class_type="controller_interface::ControllerInterface">
+  <description>
+    Diff_drive controller.
+  </description>
+  </class>
+</library>

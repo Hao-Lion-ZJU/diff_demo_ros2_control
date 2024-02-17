@@ -1,0 +1,20 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 10  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    test_controller:
+      type: diff_test_controller/DiffTestController
+
+test_controller:
+  ros__parameters:
+    left_wheel_names: ["left_wheel_joint"]
+    right_wheel_names: ["right_wheel_joint"]
+    wheels_separation: 0.10
+    wheels_per_side: 1  # actually 2, but both are controlled by 1 signal
+    wheel_radius: 0.015
+    linear.x.velocity_clamp: 2.0
+    angular.z.velocity_clamp: 1.57
+    
+
