@@ -3,10 +3,14 @@
 # 食用
 下载编译
 ```
-mkdir ~/diff_test_ws/src -p && cd ~/diff_test_ws/src
+mkdir ~/diff_test_ws -p && cd ~/diff_test_ws
 git clone git@github.com:Hao-Lion-ZJU/diff_demo_ros2_control.git
-cd ~/diff_test_ws
+mv diff_demo_ros2_control/ src
 colcon build
+```
+安装需要使用的一些功能包
+```
+sudo apt-get install ros-humble-robot-state-publisher ros-humble-xacro
 ```
 启动launch，并开启RVIZ可视化
 ```
