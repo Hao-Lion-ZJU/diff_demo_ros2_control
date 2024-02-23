@@ -1,5 +1,14 @@
 # diff_demo_ros2_control
 
+## 安装
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-ros2-control*
+```
+安装需要使用的一些功能包
+```
+sudo apt-get install ros-humble-robot-state-publisher ros-humble-xacro
+```
 # 食用
 下载编译
 ```
@@ -7,10 +16,6 @@ mkdir ~/diff_test_ws -p && cd ~/diff_test_ws
 git clone git@github.com:Hao-Lion-ZJU/diff_demo_ros2_control.git
 mv diff_demo_ros2_control/ src
 colcon build
-```
-安装需要使用的一些功能包
-```
-sudo apt-get install ros-humble-robot-state-publisher ros-humble-xacro
 ```
 启动launch，并开启RVIZ可视化
 ```
@@ -75,11 +80,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:
 
 !["UML Class Diagram"](https://control.ros.org/master/_images/uml_class_diagram.png)
 
-## 安装
 
-```bash
-sudo apt install ros-${ROS_DISTRO}-ros2-control*
-```
 
 为了更加深入的理解，建议大家可以在学习ros2-control框架之前，首先学习ROS2的基本概念和一些常用的工具，例如RVIZ、URDF等等
 

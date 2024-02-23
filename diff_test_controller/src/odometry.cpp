@@ -77,9 +77,9 @@ void Odometry::integrate(double linear, double angular, double dt)
   {
     //若角速度过小，认为基本在走直线，采用二阶龙格-库塔法积分
     const double direction = heading_ + angular * 0.5;
-    x_ += linear * cos(direction);
-    y_ += linear * sin(direction);
-    heading_ += angular;
+    x_ += linear * cos(direction) * dt;
+    y_ += linear * sin(direction) * dt;
+    heading_ += angular * dt;
   }
   else
   {
